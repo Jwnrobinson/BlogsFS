@@ -1,14 +1,14 @@
-import * as mysql from 'mysql';
 import config from '../config';
+import * as mysql from 'mysql';
+import Blogs from './blogs' ;
 
-import Blogs from './blog' ;
-
-export const Connection = mysql.createConnection(config.mysql);
+export const Connection = mysql.createConnection(config.mysql)
 
 Connection.connect(err => {
     if(err)console.log(err);
  
 });
 export default {
-    Blogs
+    Blogs,
+    
 }
